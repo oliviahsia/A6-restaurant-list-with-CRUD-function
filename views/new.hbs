@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <form class="row g-3" action="/restaurants" method="POST">
+      <div class="form-group col-md-6">
+        <label for="inputName" class="form-label">餐廳中文名稱</label>
+        <input type="text" class="form-control" id="inputName" name="name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputNameEn" class="form-label">餐廳英文名稱</label>
+        <input type="text" class="form-control" id="inputNameEn" name="name_en">
+      </div>
+      <div class="form-group col-12">
+        <label for="inputImage" class="form-label">圖片</label>
+        <input type="text" class="form-control" id="inputImage" name="image">
+      </div>
+      <div class="form-group col-12">
+        <label for="inputLocation" class="form-label">地址</label>
+        <input type="text" class="form-control" id="inputLocation" name="location">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPhone" class="form-label">電話</label>
+        <input type="text" class="form-control" id="inputPhone" name="phone">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="inputCategory" class="form-label">類型</label>
+        <select id="inputCategory" class="form-select" name="category">
+          <option selected>Choose...</option>
+          <option>中東料理</option>
+          <option>日本料理</option>
+          <option>義式餐廳</option>
+          <option>美式</option>
+          <option>酒吧</option>
+          <option>咖啡</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputMap" class="form-label">地圖</label>
+        <input type="text" class="form-control" id="inputMap" placeholder="google_map" name="google_map">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputRating" class="form-label">評分</label>
+        <input type="text" class="form-control" id="inputRating" placeholder="rating" name="rating">
+      </div>
+
+      <div class="form-group col-md-12">
+        <label for="inputDescription" class="form-label">餐廳敘述</label>
+        <input type="text" class="form-control" id="inputDescription" placeholder="description" name="description">
+      </div>
+
+      <div class="form-group col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
