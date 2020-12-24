@@ -40,7 +40,9 @@
               <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 <a href="./restaurants/{{this._id}}/edit" type="button" class="btn btn-danger">Edit</a>
                 <a href="./restaurants/{{this._id}}" type="button" class="btn btn-warning">Detail</a>
-                <button type="button" class="btn btn-success">Delete</button>
+                <form action="./restaurants/{{ this._id }}/delete" method="POST" style="display: inline;">
+                  <button type="submit" class="btn btn-success">delete</button>
+                </form>
               </div>
             </div>
           </div>
