@@ -39,6 +39,11 @@ app.get('/', (req, res) => {
     .catch(error => console.error(error))
 })
 
+app.get('/search', (req, res) => {
+  res.render('index', { restaurant })
+})
+
+
 app.get('/restaurants/new', (req, res) => {
   return res.render('new')
 })

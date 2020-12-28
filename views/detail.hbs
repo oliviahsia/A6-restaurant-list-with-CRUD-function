@@ -39,7 +39,7 @@
 
       <a href="/" class="row justify-content-center">Back</a>
       <a href="/restaurants/{{ restaurant._id }}/edit" class="row justify-content-center">Edit</a>
-      <form action="/restaurants/{{ restaurant._id }}/delete" method="POST" style="display: inline;">
+      <form action="/restaurants/{{ restaurant._id }}?_method=DELETE" method="POST" style="display: inline;">
         <button type="submit">delete</button>
       </form>
     </div>
