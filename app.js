@@ -5,6 +5,8 @@ const Restaurant = require('./models/restaurant')
 const bodyParser = require('body-parser')
 const restaurant = require('./models/restaurant')
 
+const methodOverride = require('method-override')
+
 const app = express()
 
 app.use(express.static('public'))
@@ -25,6 +27,8 @@ app.engine('hbs', exphbs({
   defaultLayout: 'main', extname: '.hbs'
 }))
 app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(methodOverride('_method'))
 
 app.set('view engine', 'hbs')
 
@@ -62,7 +66,7 @@ app.get('/restaurants/:id/edit', (req, res) => {
     .catch(error => console.log(error))
 })
 
-app.post('/restaurants/:id/edit', (req, res) => {
+app.put('/restaurants/:id', (req, res) => {
   const id = req.params.id
   const { name, name_en, category, image, location, phone, google_map, rating, description } = req.body
   return Restaurant.findById(id)
@@ -83,7 +87,7 @@ app.post('/restaurants/:id/edit', (req, res) => {
     .catch(error => console.log(error))
 })
 
-app.post('/restaurants/:id/delete', (req, res) => {
+app.delete('/restaurants/:id', (req, res) => {
   const id = req.params.id
   return Restaurant.findById(id)
     .then(restaurant => restaurant.remove())
